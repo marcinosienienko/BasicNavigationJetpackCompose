@@ -5,7 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.navigationbasicsinjetpackcompose.ui.theme.NavigationBasicsInJetpackComposeTheme
+import com.example.navigationbasicsinjetpackcompose.navigation.SetupNavGraph
+import com.example.navigationbasicsinjetpackcompose.components.NavigationBasicsInJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
 

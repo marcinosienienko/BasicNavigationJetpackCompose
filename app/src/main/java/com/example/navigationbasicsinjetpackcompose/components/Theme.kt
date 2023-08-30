@@ -1,4 +1,4 @@
-package com.example.navigationbasicsinjetpackcompose.ui.theme
+package com.example.navigationbasicsinjetpackcompose.components
 
 import android.app.Activity
 import android.os.Build

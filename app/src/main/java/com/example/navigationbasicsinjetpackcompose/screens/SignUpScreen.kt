@@ -1,4 +1,4 @@
-package com.example.navigationbasicsinjetpackcompose
+package com.example.navigationbasicsinjetpackcompose.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -8,13 +8,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun HomeScreen(
+fun SignUpScreen(
     navController: NavController
 ) {
     Box(
@@ -23,10 +24,10 @@ fun HomeScreen(
     ) {
         Text(
             modifier = Modifier.clickable {
-                navController.navigate(route = Screen.Detail.passId(10))
+                navController.popBackStack()
             },
-            text = "Home",
-            color = MaterialTheme.colorScheme.primary,
+            text = "SignUp",
+            color = Color.Yellow,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
             fontWeight = FontWeight.Bold
         )
@@ -36,9 +37,6 @@ fun HomeScreen(
 
 @Composable
 @Preview(showBackground = true)
-fun HomeScreenPreview(){
-    HomeScreen(
-        navController = rememberNavController())
+fun SignUpScreenPreview() {
+    SignUpScreen(navController = rememberNavController())
 }
-
-

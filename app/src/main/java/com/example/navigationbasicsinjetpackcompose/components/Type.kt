@@ -1,4 +1,4 @@
-package com.example.navigationbasicsinjetpackcompose.ui.theme
+package com.example.navigationbasicsinjetpackcompose.components
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
