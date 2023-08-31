@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.navigationbasicsinjetpackcompose.navigation.HOME_ROUTE
 import com.example.navigationbasicsinjetpackcompose.navigation.Screen
 
 @Composable
@@ -40,9 +41,10 @@ fun LoginScreen(
             modifier = Modifier
                 .padding(top = 150.dp)
                 .clickable {
-                    TODO("Navigate Back")
+                    navController.popBackStack()
+                    navController.navigate(Screen.Detail.passNameAndId())
                 },
-            text = "Go back",
+            text = "Open Detail Screen",
             fontSize = MaterialTheme.typography.labelMedium.fontSize,
             fontWeight = FontWeight.Medium
         )

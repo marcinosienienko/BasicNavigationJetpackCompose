@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.navigationbasicsinjetpackcompose.navigation.AUTHENTICATION_ROUTE
 import com.example.navigationbasicsinjetpackcompose.navigation.Screen
 
 @Composable
@@ -26,7 +27,10 @@ fun HomeScreen(
     ) {
         Text(
             modifier = Modifier.clickable {
-                navController.navigate(route = Screen.Detail.passId(10))
+                navController.navigate(route = Screen.Detail.passNameAndId(
+                    id = 11,
+                    name = "John"
+                ))
             },
             text = "Home",
             color = MaterialTheme.colorScheme.primary,
@@ -37,7 +41,7 @@ fun HomeScreen(
             modifier = Modifier
                 .padding(top = 150.dp)
                 .clickable {
-                           TODO("Navigate to other NavGraph")
+                           navController.navigate(AUTHENTICATION_ROUTE)
                 },
             text = "Login/Sign Up",
             fontSize = MaterialTheme.typography.titleMedium.fontSize,

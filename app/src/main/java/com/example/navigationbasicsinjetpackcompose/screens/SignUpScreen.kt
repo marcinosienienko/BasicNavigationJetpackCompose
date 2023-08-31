@@ -27,7 +27,7 @@ fun SignUpScreen(
                 navController.popBackStack()
             },
             text = "SignUp",
-            color = Color.Yellow,
+            color = Color.Green,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
             fontWeight = FontWeight.Bold
         )
